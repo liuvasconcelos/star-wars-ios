@@ -9,6 +9,7 @@
 import UIKit
 
 class InitialOptionsViewController: UIViewController {
+    public static let NIB_NAME = "InitialOptionsViewController"
     
     @IBOutlet weak var initialOptionTableView: InitialOptionsTableView!
     
@@ -18,5 +19,8 @@ class InitialOptionsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        let options: [String] = ["Films", "People", "Planets", "Species", "Starships", "Vehicles"]
+        initialOptionTableView.set(options: options)
     }
 }
