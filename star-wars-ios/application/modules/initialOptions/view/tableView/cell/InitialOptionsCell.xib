@@ -25,6 +25,9 @@
                         <state key="normal" title="Button">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <connections>
+                            <action selector="clickOnButton:" destination="igw-ms-XYv" eventType="touchUpInside" id="g74-Do-P2R"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

@@ -15,6 +15,34 @@ class InitialOptionsCell: UITableViewCell {
     @IBOutlet weak var optionButton: UIButton!
     
     func configureView(option: String) {
+        
         optionButton.setTitle(option, for: .normal)
     }
+    
+    @IBAction func clickOnButton(_ sender: Any) {
+        guard let buttonTitle = optionButton.titleLabel?.text else {return}
+        switch  buttonTitle {
+        case "Films":
+            print("filmes")
+            break
+        case "People":
+            print("pessoas")
+            break
+        case "Planets":
+            print("planetas")
+            break
+        case "Species":
+            print("especies")
+            break
+        case "Starships":
+            print("naves")
+            break
+        case "Vehicles":
+            print("veiculos")
+            break
+        default:
+            break
+        }
+    }
 }
+
