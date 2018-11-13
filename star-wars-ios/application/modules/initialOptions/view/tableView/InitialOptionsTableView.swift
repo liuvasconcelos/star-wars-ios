@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class InitialOptionsTableView: UITableView, UITableViewDataSource, UITableViewDelegate {
     
@@ -20,7 +21,6 @@ class InitialOptionsTableView: UITableView, UITableViewDataSource, UITableViewDe
         self.delegate        = self
         self.dataSource      = self
         self.separatorStyle  = .none
-        self.allowsSelection = false
         
         let cell = UINib(nibName: InitialOptionsCell.NIB_NAME, bundle: nil)
         self.register(cell, forCellReuseIdentifier: InitialOptionsCell.IDENTIFIER)
@@ -33,6 +33,7 @@ class InitialOptionsTableView: UITableView, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: InitialOptionsCell.IDENTIFIER, for: indexPath as IndexPath) as! InitialOptionsCell
         cell.configureView(option: options[indexPath.row])
+        cell.contentView.isUserInteractionEnabled = true
         return cell
     }
     
@@ -40,8 +41,18 @@ class InitialOptionsTableView: UITableView, UITableViewDataSource, UITableViewDe
         return 45
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.clickOnCell(option: options[indexPath.row])
+    }
+
     func set(options: [String]) {
         self.options = options
     }
     
+    func clickOnCell(option: String) {
+        let listView: CategoryListViewController = ViewUtils.loadNibNamed(CategoryListViewController.NIB_NAME, owner: self)!
+        
+        self.inputViewController?.present(listView, animated: true)
+    }
 }

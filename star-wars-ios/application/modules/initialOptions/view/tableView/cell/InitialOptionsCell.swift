@@ -12,37 +12,12 @@ class InitialOptionsCell: UITableViewCell {
     public static let NIB_NAME   = "InitialOptionsCell"
     public static let IDENTIFIER = "InitialOptionsCellIdentifier"
     
-    @IBOutlet weak var optionButton: UIButton!
+    @IBOutlet weak var optionLabel: UILabel!
     
     func configureView(option: String) {
         
-        optionButton.setTitle(option, for: .normal)
+        optionLabel.text = option
     }
     
-    @IBAction func clickOnButton(_ sender: Any) {
-        guard let buttonTitle = optionButton.titleLabel?.text else {return}
-        switch  buttonTitle {
-        case "Films":
-            print("filmes")
-            break
-        case "People":
-            print("pessoas")
-            break
-        case "Planets":
-            print("planetas")
-            break
-        case "Species":
-            print("especies")
-            break
-        case "Starships":
-            print("naves")
-            break
-        case "Vehicles":
-            print("veiculos")
-            break
-        default:
-            break
-        }
-    }
 }
 

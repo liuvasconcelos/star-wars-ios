@@ -21,6 +21,13 @@
 		F437FFAB2199B05200368B6F /* InitialOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437FFAA2199B05200368B6F /* InitialOptionsViewController.swift */; };
 		F437FFAE2199B17D00368B6F /* InitialOptionsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F437FFAD2199B17D00368B6F /* InitialOptionsTableView.swift */; };
 		F49B1E01219A0031002CCA94 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B1E00219A0031002CCA94 /* ViewUtils.swift */; };
+		F4FCCC30219B1674003E247C /* InitialOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FCCC2F219B1674003E247C /* InitialOptionsPresenter.swift */; };
+		F4FCCC32219B1696003E247C /* InitialOptionContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FCCC31219B1696003E247C /* InitialOptionContract.swift */; };
+		F4FCCC36219B20B7003E247C /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FCCC35219B20B7003E247C /* CategoryListViewController.swift */; };
+		F4FCCC38219B20CE003E247C /* CategoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4FCCC37219B20CE003E247C /* CategoryListViewController.xib */; };
+		F4FCCC3B219B2325003E247C /* CategoryListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FCCC3A219B2325003E247C /* CategoryListTableView.swift */; };
+		F4FCCC3E219B251C003E247C /* CategoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FCCC3D219B251C003E247C /* CategoryListCell.swift */; };
+		F4FCCC40219B252A003E247C /* CategoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4FCCC3F219B252A003E247C /* CategoryListCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +74,13 @@
 		F437FFAA2199B05200368B6F /* InitialOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialOptionsViewController.swift; sourceTree = "<group>"; };
 		F437FFAD2199B17D00368B6F /* InitialOptionsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialOptionsTableView.swift; sourceTree = "<group>"; };
 		F49B1E00219A0031002CCA94 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		F4FCCC2F219B1674003E247C /* InitialOptionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialOptionsPresenter.swift; sourceTree = "<group>"; };
+		F4FCCC31219B1696003E247C /* InitialOptionContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialOptionContract.swift; sourceTree = "<group>"; };
+		F4FCCC35219B20B7003E247C /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
+		F4FCCC37219B20CE003E247C /* CategoryListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryListViewController.xib; sourceTree = "<group>"; };
+		F4FCCC3A219B2325003E247C /* CategoryListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTableView.swift; sourceTree = "<group>"; };
+		F4FCCC3D219B251C003E247C /* CategoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListCell.swift; sourceTree = "<group>"; };
+		F4FCCC3F219B252A003E247C /* CategoryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +225,7 @@
 		F437FF9D2199A5AF00368B6F /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				F4FCCC33219B2085003E247C /* categoryList */,
 				F437FFA62199A98800368B6F /* initialOptions */,
 			);
 			path = modules;
@@ -275,6 +290,8 @@
 			children = (
 				F437FFA72199AB3500368B6F /* view */,
 				F437FFAA2199B05200368B6F /* InitialOptionsViewController.swift */,
+				F4FCCC2F219B1674003E247C /* InitialOptionsPresenter.swift */,
+				F4FCCC31219B1696003E247C /* InitialOptionContract.swift */,
 			);
 			path = initialOptions;
 			sourceTree = "<group>";
@@ -295,6 +312,42 @@
 				F437FFAD2199B17D00368B6F /* InitialOptionsTableView.swift */,
 			);
 			path = tableView;
+			sourceTree = "<group>";
+		};
+		F4FCCC33219B2085003E247C /* categoryList */ = {
+			isa = PBXGroup;
+			children = (
+				F4FCCC34219B209D003E247C /* view */,
+				F4FCCC35219B20B7003E247C /* CategoryListViewController.swift */,
+			);
+			path = categoryList;
+			sourceTree = "<group>";
+		};
+		F4FCCC34219B209D003E247C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F4FCCC39219B230B003E247C /* tableview */,
+				F4FCCC37219B20CE003E247C /* CategoryListViewController.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		F4FCCC39219B230B003E247C /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				F4FCCC3C219B24D1003E247C /* cell */,
+				F4FCCC3A219B2325003E247C /* CategoryListTableView.swift */,
+			);
+			path = tableview;
+			sourceTree = "<group>";
+		};
+		F4FCCC3C219B24D1003E247C /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				F4FCCC3D219B251C003E247C /* CategoryListCell.swift */,
+				F4FCCC3F219B252A003E247C /* CategoryListCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,7 +460,9 @@
 				F437FF772199A09500368B6F /* LaunchScreen.storyboard in Resources */,
 				F428B8CB219A10A300BD2F33 /* InitialOptionsCell.xib in Resources */,
 				F437FFA92199AB4C00368B6F /* InitialOptionsViewController.xib in Resources */,
+				F4FCCC38219B20CE003E247C /* CategoryListViewController.xib in Resources */,
 				F437FF742199A09500368B6F /* Assets.xcassets in Resources */,
+				F4FCCC40219B252A003E247C /* CategoryListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,11 +544,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FCCC36219B20B7003E247C /* CategoryListViewController.swift in Sources */,
 				F437FFAE2199B17D00368B6F /* InitialOptionsTableView.swift in Sources */,
+				F4FCCC32219B1696003E247C /* InitialOptionContract.swift in Sources */,
 				F437FF6D2199A09300368B6F /* AppDelegate.swift in Sources */,
+				F4FCCC30219B1674003E247C /* InitialOptionsPresenter.swift in Sources */,
 				F49B1E01219A0031002CCA94 /* ViewUtils.swift in Sources */,
 				F428B8C9219A0F0C00BD2F33 /* InitialOptionsCell.swift in Sources */,
+				F4FCCC3B219B2325003E247C /* CategoryListTableView.swift in Sources */,
 				F437FFAB2199B05200368B6F /* InitialOptionsViewController.swift in Sources */,
+				F4FCCC3E219B251C003E247C /* CategoryListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

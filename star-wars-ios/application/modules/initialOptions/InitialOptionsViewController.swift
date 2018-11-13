@@ -8,10 +8,14 @@
 
 import UIKit
 
-class InitialOptionsViewController: UIViewController {
+class InitialOptionsViewController: UIViewController, InitialOptionsViewContract {
     public static let NIB_NAME = "InitialOptionsViewController"
     
     @IBOutlet weak var initialOptionTableView: InitialOptionsTableView!
+    
+    lazy var presenter: InitialOptionsPresenterContract = {
+        return InitialOptionsPresenter()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,4 +27,5 @@ class InitialOptionsViewController: UIViewController {
         let options: [String] = ["Films", "People", "Planets", "Species", "Starships", "Vehicles"]
         initialOptionTableView.set(options: options)
     }
+    
 }
